@@ -44,14 +44,14 @@ Examples
 //            str1 = str1.replace(control, "");
 //        }
 //
-//        List<Integer> list1 = list.stream().distinct().toList();
-//        if (list1.size() > 2) {
-//            return false;
-//        } else if (list1.size() == 1) {
-//            return true;
-//        } else if ((list1.size() == 2) && ((list1.get(0) == 1) || list1.get(1) == 1)) {
-//            return true;
-//        }
+////        List<Integer> list1 = list.stream().distinct().toList();
+////        if (list1.size() > 2) {
+////            return false;
+////        } else if (list1.size() == 1) {
+////            return true;
+////        } else if ((list1.size() == 2) && ((list1.get(0) == 1) || list1.get(1) == 1)) {
+////            return true;
+////        }
 //
 //        Collections.sort(list);
 //
@@ -69,7 +69,7 @@ Examples
 //        }
 //        Collections.sort(list2);
 //
-//        return (list2.get(0) == 1) && (list1.get(1) - 1 == list1.get(0));
+//      //  return (list2.get(0) == 1) && (list1.get(1) - 1 == list1.get(0));
 //
 //    }
 

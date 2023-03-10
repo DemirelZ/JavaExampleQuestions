@@ -24,24 +24,22 @@ public class Challenge2 {
 
     public static void main(String[] args) {
 
-        Integer [] arr = {3,10,20,1,2};
+        Integer[] arr = {3, 10, 20, 1, 2};
 
 
         System.out.println("getIndex(arr,15) = " + getIndex(arr, 15));
 
-
     }
 
+    public static int getIndex(Integer[] arr, int cycle) {
 
-    public static int getIndex(Integer [] arr, int cycle){
-
-        ArrayList xArr=new ArrayList<>();
+        ArrayList xArr = new ArrayList<>();
         for (int i = 0; i < arr.length; i++) {
             xArr.add(arr[i]);
         }
 
         Arrays.sort(arr);
-        ArrayList newArry=new ArrayList<>();
+        ArrayList newArry = new ArrayList<>();
 
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i]; j++) {
@@ -55,53 +53,42 @@ public class Challenge2 {
         return xArr.indexOf(o);
     }
 
-//    public static int getIndex2(List<Integer> list, Integer cycle){
-//
-//        ArrayList xArr=new ArrayList<>();
-//        for (int i = 0; i < arr.length; i++) {
-//            xArr.add(arr[i]);
-//        }
-//
-//        Arrays.sort(arr);
-//        ArrayList newArry=new ArrayList<>();
-//
-//        for (int i = 0; i < arr.length; i++) {
-//            for (int j = 0; j < arr[i]; j++) {
-//                newArry.add(arr[i]);
-//            }
-//        }
-//
-//        System.out.println("newArry = " + newArry);
-//        Object o = newArry.get(cycle);
-//
-//        return xArr.indexOf(o);
-//    }
+    public static int getIndex2(Integer[] arr, Integer cycle) {
+
+        ArrayList xArr = new ArrayList<>();
+        for (int i = 0; i < arr.length; i++) {
+            xArr.add(arr[i]);
+        }
+
+        Arrays.sort(arr);
+        ArrayList newArry = new ArrayList<>();
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i]; j++) {
+                newArry.add(arr[i]);
+            }
+        }
+
+        System.out.println("newArry = " + newArry);
+        Object o = newArry.get(cycle);
+
+        return xArr.indexOf(o);
+    }
 
 
-
-
-
-
-
-
-
-
-
-
-
-    public static Integer getTaskIndexAtCycle(Integer[] tasks,Integer cycle){
+    public static Integer getTaskIndexAtCycle(Integer[] tasks, Integer cycle) {
         Integer index = 0;
-        Integer resultCycle =0;
-        Map<Integer,Integer> mapList = new HashMap<>();
+        Integer resultCycle = 0;
+        Map<Integer, Integer> mapList = new HashMap<>();
         for (int i = 0; i < tasks.length; i++) {
-            mapList.put(tasks[i],i); //3,0  10,1   20,2    1,3    2,4
+            mapList.put(tasks[i], i); //3,0  10,1   20,2    1,3    2,4
         }
         Arrays.sort(tasks); //[1,2,3,10,20]
 
         for (int i = 0; i < tasks.length; i++) {
-            resultCycle+= tasks[i];
+            resultCycle += tasks[i];
             index = i;
-            if (resultCycle>cycle){
+            if (resultCycle > cycle) {
                 break;
             }
         }

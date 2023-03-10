@@ -13,7 +13,7 @@ public class ArraysAndArrayList {
 
 
 
-        // day 26 dan devam et
+
 
         //System.out.println(task_28("Mmerhhahbaeeeeeeeeeeeee"));
 
