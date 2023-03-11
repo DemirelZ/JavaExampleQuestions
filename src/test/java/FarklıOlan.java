@@ -25,10 +25,10 @@ public class FarklıOlan {
         //System.out.println("set = " + set);
         //System.out.println("list = " + list);
 
-        Map<Integer,Integer> map=new HashMap<>();
+        Map<Integer, Integer> map = new HashMap<>();
 
         for (int i = 0; i < list.size(); i++) {
-            Integer count=0;
+            Integer count = 0;
             for (int j = 0; j < list.size(); j++) {
                 if (list.get(i) == list.get(j)) {
                     count++;
@@ -44,9 +44,9 @@ public class FarklıOlan {
 
     public static Integer findDifferentInArray(int[] arr) {
 
-        Map<Integer,Integer> map=new HashMap<>();
+        Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < arr.length; i++) {
-            Integer count=0;
+            Integer count = 0;
             for (int j = 0; j < arr.length; j++) {
                 if (arr[i] == arr[j]) {
                     count++;
