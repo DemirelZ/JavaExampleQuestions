@@ -8,7 +8,7 @@ public class FarklıOlan {
 
     public static void main(String[] args) {
 
-        int[] sayilar = {35, 45, 55, 65, 75, 35, 45, 55, 65, 75, 25};
+        int[] sayilar = {35, 45, 25, 55, 65, 75, 35, 45, 55, 65, 75};
 
         System.out.println("findDifferentInArray(sayilar) = " + findDifferentInArray(sayilar));
 
