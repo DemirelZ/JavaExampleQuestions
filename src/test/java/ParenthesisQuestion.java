@@ -1,48 +1,42 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class ParenthesisQuestion {
 
 
     public static void main(String[] args) {
 
-        String prntz = ")()(";
+        String prntz = "()))((()";
 
-        parenthesiss(prntz);
+        System.out.println(parentheses(prntz));
 
 
     }
 
+    public static boolean parentheses(String str) {
 
-    public static void parenthesiss(String str) {
+        int count = 0;
+        char[] charArr = str.toCharArray();
 
-        String[] splitStr = str.trim().split("");
+        for (char c : charArr) {
 
-        if (splitStr[0].equals(")")) {
-
-            System.out.println(str + " is not valid");
-
-        } else {
-
-            String acmaParantez = "(";
-            String kapamaParantez = ")";
-            int acmaP = 0;
-            int kapamaP = 0;
-
-            for (int i = 0; i < splitStr.length; i++) {
-
-                if (acmaParantez.equals(splitStr[i])) {
-                    acmaP++;
-                } else if (kapamaParantez.equals(splitStr[i])) {
-                    kapamaP++;
-                }
+            if (c == '(') {
+                count++;
+            } else if (c == ')') {
+                count--;
+            }
+            if (count < 0) {
+                return false;
             }
 
-            if (acmaP == kapamaP) {
-                System.out.println(str + " is valid");
-            } else {
-                System.out.println(str + " is not valid");
-            }
         }
+        return count == 0;
 
     }
+
+
+
 
 
 }
