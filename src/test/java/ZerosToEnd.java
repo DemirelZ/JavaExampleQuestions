@@ -10,6 +10,7 @@ public class ZerosToEnd {
         Integer[] arr1 = {0, 2, 3, 5, 0, 4, 5};
         List<Integer> qlist = new ArrayList<>(Arrays.asList(arr1));
         System.out.println("zerosToEnd(qlist) = " + allZerosGoToEnd(qlist));
+        System.out.println("moveAllZeroAddEnd(Arrays.asList(arr1)) = " + moveAllZeroAddEnd2(Arrays.asList(arr1)));
 
     }
 
@@ -38,5 +39,21 @@ public class ZerosToEnd {
 
         return newList2;
 
+    }
+
+    public static List<Integer> moveAllZeroAddEnd2(List<Integer> list){
+        List<Integer> list1=new ArrayList<>();
+        for (int i = 0; i <list.size() ; i++) {
+            if(!list.get(i).equals(0)){
+                list1.add(list.get(i));
+            }
+
+        }
+        int  totalSize=(list.size()-list1.size());
+        for (int i = 0; i < totalSize ; i++) {
+            list1.add(0);
+        }
+
+        return list1;
     }
 }
