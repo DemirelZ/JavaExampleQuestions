@@ -54,6 +54,25 @@ public class PolindromWords {
 
     }
 
+    public static List<String> removePalindromWithIterable(List<String> list){
+
+        Iterator<String> iter=list.iterator();
+
+        while (iter.hasNext()){
+
+            String str= iter.next();
+            if (str.equals(reverseWord(str))){
+                iter.remove();
+
+            }
+
+        }
+
+        return list;
+
+
+    }
+
 
 
 
