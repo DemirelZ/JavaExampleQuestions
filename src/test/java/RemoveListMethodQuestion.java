@@ -49,4 +49,10 @@ public class RemoveListMethodQuestion {
 
     }
 
+    public static boolean removeListMethod7(List<Integer> list,Integer data) {
+
+
+        return list.removeAll(Arrays.asList(new Integer[]{data}));
+    }
+
 }
