@@ -9,7 +9,7 @@ public class RemoveListMethodQuestion {
 
         Integer[] example = {2,4,8,7,6,5,10};
 
-        System.out.println(clearAllList(Arrays.asList(example), 10));
+        System.out.println(clearAllList2(Arrays.asList(example), 10));
 
 
     }
@@ -32,6 +32,20 @@ public class RemoveListMethodQuestion {
 
         }
         return list2;
+
+    }
+
+    public static List<Integer> clearAllList2(List<Integer> list, Integer data){
+
+
+        for (int i = 0; i < list.size(); i++) {
+
+            if(list.get(i).equals(data)){
+                list.remove(list.get(i));
+            }
+
+        }
+        return list;
 
     }
 
