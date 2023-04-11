@@ -9,7 +9,7 @@ public class RemoveListMethodQuestion {
 
         Integer[] example = {2,4,8,7,6,5,10};
 
-        System.out.println(clearAllList2(Arrays.asList(example), 10));
+        System.out.println(removeListMethod7(Arrays.asList(example), 10));
 
 
     }
