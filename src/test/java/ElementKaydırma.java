@@ -10,13 +10,11 @@ public class ElementKaydırma {
 
     public static void main(String[] args) {
 
-        int [] arrOrn= {4,5,6,7};
-
-        System.out.println("arrOrn = " + Arrays.toString(arrOrn));
+        int [] arrOrn= {40,50,60,70,80,90,100,200,300};
 
 
 
-        //System.out.println(sondakiBasa(Arrays.toString(arrOrn)));
+        System.out.println(Arrays.toString(sondakiBasa(arrOrn)));
 
     }
 
