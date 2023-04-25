@@ -30,4 +30,20 @@ public class ComplateWithPoint {
         }
 
     }
+
+    public static String complateWithPoint2(String str){
+
+        if(str.length()>=5){
+            return str.substring(0,5);
+        }
+        else{
+            String result="";
+            for(int i=0; i<5-str.length(); i++){
+                result+=".";
+            }
+            return str+result;
+
+        }
+
+    }
 }
