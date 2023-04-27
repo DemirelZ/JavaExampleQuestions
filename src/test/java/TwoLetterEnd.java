@@ -18,7 +18,16 @@ public class TwoLetterEnd {
         }else {
             return false;
         }
+    }
 
+    public static boolean twoLetterEnd(String str){
+        String start="";
+        String end="";
+        for (int i=0,j=str.length()-2; i<2; i++,j++){
+            start+=str.charAt(i);
+            end+=str.charAt(j);
+        }
+        return start.equals(end);
     }
 
 }
