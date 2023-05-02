@@ -21,7 +21,7 @@ public class HackerRank_Question_7 {
                 //Complete the code
 
                 if(x>=Byte.MIN_VALUE && x<=Byte.MAX_VALUE){
-                    System.out.println("* byte");
+                 //   System.out.println("* byte");
                     System.out.println("* short");
                     System.out.println("* int");
                     System.out.println("* long");
