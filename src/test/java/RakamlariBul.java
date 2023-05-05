@@ -8,6 +8,11 @@ public class RakamlariBul {
 
     }
 
+    // yazılan kelimenin içerinde sayıları yazdıran metodu yazınız
+    // merha123ba     123
+    // 123a23ff34    1232334
+    //ASCII
+
 
     public static String rakamlariAyir(String str){
 
