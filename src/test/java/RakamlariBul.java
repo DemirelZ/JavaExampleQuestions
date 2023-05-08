@@ -2,7 +2,7 @@ public class RakamlariBul {
 
     public static void main(String[] args) {
 
-        String exampleStr="as*d1+23dfg67/8ghjjklş90";
+        String exampleStr="as*d1+23ııuhkıh6775765dfg67/8ghjjklş90";
 
         System.out.println(rakamlariAyir(exampleStr));
 
