@@ -45,4 +45,28 @@ public class EnCokSayi {
 
     }
 
+    public static int enCokBulunanSayi(int[] arr) {
+        int enCokTekrarSayisi = 0;
+        int enCokTekrarSayininDegeri = -1;
+
+        for (int i = 0; i < arr.length; i++) {
+            int tekrarSayisi = 0;
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] == arr[j]) {
+                    tekrarSayisi++;
+                }
+            }
+            if (tekrarSayisi > enCokTekrarSayisi) {
+                enCokTekrarSayisi = tekrarSayisi;
+                enCokTekrarSayininDegeri = arr[i];
+            }
+        }
+
+        if (enCokTekrarSayisi == 0) {
+            return -1;
+        }
+
+        return enCokTekrarSayininDegeri;
+    }
+
 }
