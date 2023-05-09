@@ -6,9 +6,11 @@ public class EnCokSayi {
 
     public static void main(String[] args) {
 
-        int [] arrExample={2,3,5,6,8,8,3,3};
+        int [] arrExample={2,3,3,3,6,6,5,6,3};
 
         System.out.println(enCokSayiyiBulanMetot(arrExample));
+
+      //  System.out.println(enCokBulunanSayi(arrExample));
 
 
     }
