@@ -1,6 +1,17 @@
+import java.lang.management.ManagementPermission;
+import java.util.HashMap;
+import java.util.Map;
+
 public class EnCokSayi {
 
+    public static void main(String[] args) {
 
+        int [] arrExample={2,3,5,6,8,8,3,3};
+
+        System.out.println(enCokSayiyiBulanMetot(arrExample));
+
+
+    }
 
 
 
@@ -13,9 +24,24 @@ public class EnCokSayi {
     //
     //[2,4,5,8]  -1
 
-    public static int enCokSayiyiBulanMetot(){
+    public static int enCokSayiyiBulanMetot(int [] arr){
 
-
+        int enCok=-1;
+        int count;
+        int adet=1;
+        for(int i=0; i<arr.length; i++){
+            count=0;
+            for(int j=0; j<arr.length; j++){
+                if(arr[i]==arr[j]){
+                    count++;
+                }
+            }
+            if(count>adet){
+                enCok=arr[i];
+                adet=count;
+            }
+        }
+        return enCok;
 
     }
 
