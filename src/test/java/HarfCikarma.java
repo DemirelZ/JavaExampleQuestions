@@ -3,7 +3,9 @@ public class HarfCikarma {
 
     public static void main(String[] args) {
 
-        System.out.println(IstediginHarfiCikar("Merhaba", "a"));
+     //   System.out.println(IstediginHarfiCikar("Merhaba", "m"));
+
+        System.out.println(harfTemizle("Merhaba", "p"));
 
     }
 
@@ -27,5 +29,9 @@ public class HarfCikarma {
         }
 
         return depo;
+    }
+
+    public static String harfTemizle(String kelime,String harf){
+        return kelime.replace(harf,"");
     }
 }
