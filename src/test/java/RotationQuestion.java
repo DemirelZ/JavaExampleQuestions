@@ -36,6 +36,13 @@ public class RotationQuestion {
 
     }
 
+    public static boolean isRotation2(String word, String rotation){
+
+    if(word.length()!=rotation.length()) return false;
+    return (word+word).contains(rotation);
+
+    }
+
 
 
 }
