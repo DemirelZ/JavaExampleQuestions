@@ -78,6 +78,37 @@ Bu soru için cevap String result="1 2 7 11 11 17 21" şeklinde olmalıdır.
         return result;
     }
 
+    public static String sortAndSum(String str) {
+        // Split the string into individual numbers
+        String[] nums = str.split(" ");
+
+        // Convert the numbers to integers and calculate the sum
+        int sum = 0;
+        int[] intNums = new int[nums.length];
+        for (int i = 0; i < nums.length; i++) {
+            intNums[i] = Integer.parseInt(nums[i]);
+            sum += intNums[i];
+        }
+
+        // Sort the numbers in ascending order
+        Arrays.sort(intNums);
+
+        // Create a new string with the sorted numbers
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < intNums.length; i++) {
+            sb.append(intNums[i]);
+            if (i < intNums.length - 1) {
+                sb.append(" ");
+            }
+        }
+
+        // Append the sum to the end of the string
+        sb.append(" ").append(sum);
+
+        // Return the final string
+        return sb.toString();
+    }
+
 
 
 }
