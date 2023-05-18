@@ -20,5 +20,33 @@ public class EksikTekSayi {
      */
 
 
+    public static void main(String[] args) {
+
+        Integer[] exArr={1,3,5,7,11,13,15};
+        Integer[] exArr2={9,7,3};
+
+        System.out.println(eksikTekSayiBul(exArr2));
+
+
+    }
+
+    public static int eksikTekSayiBul(Integer[] arr) {
+
+        for (int i = 0; i < arr.length; i++) {
+
+            if(arr[i]-arr[i+1]==-4){
+
+                return arr[i]+2;
+            }else if(arr[i]-arr[i+1]==4){
+
+                return arr[i]-2;
+            }
+
+
+
+        }
+
+        return -1;
+    }
 
 }
