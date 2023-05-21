@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class HackerRank_Question_8 {
 
     /*
@@ -12,4 +14,48 @@ public class HackerRank_Question_8 {
     Sample Output
     Good job
      */
+
+    public static void main(String[] args) {
+
+      //  goodJobQuestion(100);
+
+
+
+        Scanner scan=new Scanner(System.in);
+        int n= scan.nextInt();
+
+        String s=Integer.toString(n);
+        int s1 = Integer.parseInt(s);
+
+        if(-100<=s1 && s1<=100){
+
+            System.out.println("Good job");
+
+        }else {
+
+            System.out.println("Wrong answer");
+        }
+
+
+
+
+
+    }
+
+    public static void goodJobQuestion(Integer n){
+
+
+        String s=Integer.toString(n);
+        int s1 = Integer.parseInt(s);
+
+        if(-100<=s1 && s1<=100){
+
+            System.out.println("Good job");
+
+        }else {
+
+            System.out.println("Wrong answer");
+        }
+
+    }
 }
