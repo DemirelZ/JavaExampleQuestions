@@ -6,6 +6,17 @@ public class shortLongShort {
 
         uzunOlanOrtaya("mehmet", "ali");
 
+        //------------------------------
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Kısa kelimeyi girin: ");
+        String kisaKelime = scanner.next();
+        System.out.print("Uzun kelimeyi girin: ");
+        String uzunKelime = scanner.next();
+
+        String sonuc = yazdir(kisaKelime, uzunKelime);
+        System.out.println("Sonuç: " + sonuc);
+
     }
 
 
@@ -42,5 +53,21 @@ public class shortLongShort {
         }
 
 
+    }
+
+    public static String yazdir(String kisaKelime, String uzunKelime) {
+        StringBuilder sb = new StringBuilder();
+
+        sb.append(kisaKelime); // Kısa kelimeyi başta 1. kez ekle
+        sb.append(kisaKelime); // Kısa kelimeyi başta 2. kez ekle
+
+        for (int i = 0; i < 30; i++) {
+            sb.append(uzunKelime); // Uzun kelimeyi ortada 30 kez ekle
+        }
+
+        sb.append(kisaKelime); // Kısa kelimeyi sonda 1. kez ekle
+        sb.append(kisaKelime); // Kısa kelimeyi sonda 2. kez ekle
+
+        return sb.toString();
     }
 }
