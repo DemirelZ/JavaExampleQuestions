@@ -15,10 +15,16 @@ public class HackerRank_Question_11 {
 
     public static void main(String[] args) {
 
-        Scanner scan=new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
         String A = scan.next();
 
-
+        String depo = "";
+        for (int i = A.length() - 1; 0 <= i; i--) {
+            depo += A.charAt(i);
+        }
+        if (A.equals(depo)) {
+            System.out.println("yes");
+        } else System.out.println("no");
 
 
     }
